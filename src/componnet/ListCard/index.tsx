@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from 'react';
-import { COLORS, HEIGHT, IMAGES_URL, WIDTH } from '../../common';
+import { COLORS, HEIGHT, IMAGES_URL, normalizeFontSize, WIDTH } from '../../common';
 
 const ListCard = ()=>{
     return(
@@ -21,9 +21,9 @@ const ListCard = ()=>{
 const styles = StyleSheet.create({
     cardWrapperStyle: {
         width: WIDTH * 0.4,
-        gap: 16,
-        marginBottom: 10,
-        paddingBottom: 10,
+        gap: normalizeFontSize(16),
+        marginBottom: normalizeFontSize(10),
+        paddingBottom: normalizeFontSize(10),
      },
     imageStyle: {
         width: '100%',
@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
 
      },
      titleStyle: {
-        fontSize: 15,
+        fontSize: normalizeFontSize(15),
         color: COLORS.white,
         alignSelf: 'flex-start',
         fontWeight: 'bold',
      },
      subTitleStyle: {
-        fontSize: 12,
+        fontSize: normalizeFontSize(12),
         color: COLORS.white,
      },
 });

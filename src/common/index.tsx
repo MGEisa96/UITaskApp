@@ -1,4 +1,5 @@
-import { Dimensions, I18nManager } from "react-native";
+import { Dimensions, I18nManager ,PixelRatio} from "react-native";
+
 
 export const COLORS = {
     black: '#000000',
@@ -108,3 +109,22 @@ export const COLORS = {
   };
   export const WIDTH = Dimensions.get('window').width;
 export const HEIGHT = Dimensions.get('window').height;
+
+const {width, height} = Dimensions.get('window');
+
+//Guideline sizes are based on standard ~5" screen mobile device
+const guidelineBaseWidth = 375;
+const guidelineBaseHeight = 812;
+
+
+
+export const horizontalScale = (size: number) =>
+  (width / guidelineBaseWidth) * size;
+export const verticalScale = (size: number) =>
+  (height / guidelineBaseHeight) * size;
+export const normalizeFontSize = (size: number) => {
+  //812 is the height for iphoneX as this is the stable and our design
+  return PixelRatio.roundToNearestPixel(
+    (size - 1) * (height / guidelineBaseHeight),
+  );
+};

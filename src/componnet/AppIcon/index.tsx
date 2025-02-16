@@ -8,7 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ICONS, IconsTransform, IconType } from '../../common';
+import { ICONS, IconsTransform, IconType, normalizeFontSize } from '../../common';
 
 interface IconConfig {
   [key: string]: React.ComponentType<any>;
@@ -59,7 +59,7 @@ const AppIcon: React.FC<AppIconProps> = ({
       style={[styles.iconWrapperStyle, iconWrapperStyle]}>
       <IconComponent
         name={name}
-        size={size}
+        size={normalizeFontSize(size)}
         color={color}
         style={[IconsTransform, style]}
       />

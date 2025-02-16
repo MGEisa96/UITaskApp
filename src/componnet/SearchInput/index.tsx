@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput, View } from 'react-native';
 import React from 'react';
 import AppIcon from '../AppIcon';
-import { COLORS, ICONS, WIDTH } from '../../common';
+import { COLORS, horizontalScale, ICONS, normalizeFontSize, WIDTH } from '../../common';
 
 const SearchInput = () => {
   return (
@@ -36,12 +36,12 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         width: '92%',
-        height: 45,
+        height: horizontalScale(45),
         flexDirection: 'row',
         borderRadius: 12,
         borderWidth: 1,
         borderColor: COLORS.secondry,
-        paddingHorizontal: 16,
+        paddingHorizontal: normalizeFontSize(16),
     },
     inputStyle: {
         width: '100%',
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
         color: COLORS.white,
     },
     iconStyle: {
-        width: 40,
-        height: 40,
+        width: horizontalScale(40),
+        height: horizontalScale(40),
         borderRadius: 12,
         backgroundColor: COLORS.secondry,
         justifyContent: 'center',

@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import React from 'react';
-import { COLORS, HEIGHT, IMAGES_URL } from '../../common';
+import { COLORS, normalizeFontSize } from '../../common';
 import Header from '../../componnet/Header';
 import HomeCard from '../../componnet/HomeCard';
 import SearchInput from '../../componnet/SearchInput';
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.primary,
     },
     titleStyle: {
-      fontSize: 40,
+      fontSize: normalizeFontSize(40),
       color: COLORS.white,
       alignSelf: 'center',
       fontWeight: 'bold',
@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     listStyle:{
-      marginTop: '9%',
-      paddingHorizontal: 30,
+      marginTop: '2%',
+      paddingHorizontal: normalizeFontSize(30),
     },
     columnWrapperStyle: {
-      gap: 16,
+      gap: normalizeFontSize(16),
     },
 });

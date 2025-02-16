@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { COLORS, ICONS, WIDTH } from "../../common";
+import { COLORS, ICONS, normalizeFontSize, verticalScale, WIDTH } from "../../common";
 import AppIcon from "../AppIcon";
 
 const data = [
@@ -40,24 +40,24 @@ export default FilterList;
 const styles = StyleSheet.create({
     listContanier: {
         width: WIDTH,
-        height: 80,
+        height: verticalScale(80),
         paddingTop: '5%',
     },
     listStyle: {
-        gap: 10,
+        gap: normalizeFontSize(10),
         paddingHorizontal: '7%',
     },
     cardStyle: {
-        paddingHorizontal: 15,
+        paddingHorizontal: normalizeFontSize(15),
         flexDirection: 'row',
         alignItems: 'center',
         gap: 8,
         backgroundColor: COLORS.secondry,
-        height: 40,
+        height: verticalScale(40),
         borderRadius: 10,
     },
     labelStyle: {
-        fontSize: 17,
+        fontSize: normalizeFontSize(17),
         color: COLORS.white,
     },
 });

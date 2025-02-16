@@ -10,7 +10,7 @@ const Header = () => {
       name={ICONS.FontAwesome.notifications}
        type="Ionicons"
        color={COLORS.white}
-       size={35}
+       size={28}
        />
        <AppIcon name={ICONS.FontAwesome.user_circle}
        type="FontAwesome"

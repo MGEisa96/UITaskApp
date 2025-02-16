@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { COLORS, HEIGHT, ICONS, IMAGES_URL, WIDTH } from '../../common';
+import { COLORS, HEIGHT, horizontalScale, ICONS, IMAGES_URL, normalizeFontSize, WIDTH } from '../../common';
 
 const HomeCard = () => {
   return (
@@ -34,18 +34,18 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     titleStyle: {
-        fontSize: 15,
+        fontSize: normalizeFontSize(15),
         fontWeight: 'bold',
         color: COLORS.white,
     },
     subTitleStyle: {
-        fontSize: 12,
+        fontSize: normalizeFontSize(12),
         // fontWeight: 'bold',
         color: COLORS.white,
     },
     imageStyle: {
-        width: 65,
-        height: 65,
+        width: horizontalScale(65),
+        height: horizontalScale(65),
         backgroundColor: 'red',
         borderRadius: 14,
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Platform,
   StyleSheet,
   View
 } from 'react-native';
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     flex:1,
     backgroundColor: '#263D94',
-    paddingTop: '12%',
+    paddingTop: Platform.OS === 'ios' ? '13%' : '5%',
   },
 });
 
